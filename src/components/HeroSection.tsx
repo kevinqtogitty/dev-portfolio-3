@@ -1,32 +1,33 @@
 import React, { useEffect, useState } from 'react';
-import { a, config, useSpring, useTransition } from '@react-spring/web';
+import {
+  a,
+  config,
+  useSpring,
+  useSprings,
+  useTransition
+} from '@react-spring/web';
 
 const HeroSection = () => {
-  const [animatingDone, setAnimatingDone] = useState(false);
-  const [text, setText] = useState('Web Developer');
-  let index = 0;
+  const [index, setIndex] = useState(0);
+
   const items = [
-    'Web Developer',
-    'Photographer',
-    'Cinephile',
-    'Aphex Twin Fan'
+    { text: 'Web developer', gradient: 'gradient-1' },
+    { text: 'Photographer', gradient: 'gradient-2' },
+    { text: 'Cinephile', gradient: 'gradient-3' },
+    { text: 'Aphex Twin fan', gradient: 'gradient-4' }
   ];
 
   useEffect(() => {
-    setTimeout(() => {
-      setAnimatingDone(true);
-    }, 4000);
-  }, []);
-
-  useEffect(() => {
     const change = setInterval(() => {
-      if (index === 4) index = 0;
-      setText(items[index]);
-      index++;
-    }, 3000);
+      setIndex((state) => state + 1);
+    }, 4000);
 
     return () => clearInterval(change);
   }, []);
+
+  useEffect(() => {
+    if (index === 4) setIndex(0);
+  }, [index]);
 
   useEffect(() => {
     let mouseCursor = document.querySelector<HTMLElement>('.dotted');
@@ -58,36 +59,34 @@ const HeroSection = () => {
     config: config.molasses
   });
 
-  const transition = useTransition(text, {
-    from: { opacity: 0, x: '50%' },
-    enter: { opacity: 1, x: '0%' },
-    leave: { opacity: 0, x: '-50%' },
-    config: config.molasses
-  });
-
   return (
     <section className="page-section page-1">
       <a.div style={spring} className="hero-header">
         <a.h1>Kevin To.</a.h1>
         <a.h1>
-          {transition(
-            (style, item) =>
+          {items.map(
+            (item, i) =>
               item && (
-                <a.p
-                  className="text-transition"
-                  style={{
-                    ...style,
-                    position: 'absolute',
-                    left: '.5rem',
-                    width: '40rem'
-                  }}
+                <p
+                  key={i}
+                  className={`text-transition ${item.gradient} ${
+                    index === i ? 'show' : null
+                  }`}
                 >
-                  {text}
-                </a.p>
+                  {item.text}
+                </p>
               )
           )}
         </a.h1>
       </a.div>
+      <div className="footer">
+        <div>
+          <span /> <p>* Press any key for a surprise</p>
+        </div>
+        <div>
+          <span /> <p>Made with AstroJS, p5.js, React-Spring, Radix-UI</p>
+        </div>
+      </div>
     </section>
   );
 };
