@@ -1,13 +1,12 @@
 import React from 'react';
 
+import picture from '../assets/images/profileMe.jpg';
+
 const AboutSection = () => {
   return (
     <section className="page-section page-2">
       <article>
-        <img
-          src="src/assets/images/profileMe.jpg"
-          alt="Profile picture of me, Kevin To"
-        />
+        <img src={picture} alt="Profile picture of me, Kevin To" />
         <div>
           <p>
             I'm a full stack web developer based in the DC Area 🏛️. As a design

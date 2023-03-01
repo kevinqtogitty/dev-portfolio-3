@@ -1,5 +1,5 @@
-import { a, useTrail } from '@react-spring/web';
 import React from 'react';
+import { a, useTrail } from '@react-spring/web';
 import projectData from '../data/projects.json';
 import ProjectCardComponent from './ProjectCardComponent';
 

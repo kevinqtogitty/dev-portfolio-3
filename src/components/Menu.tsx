@@ -1,14 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import PlusIcon from '../assets/icons/plus.svg';
 
-import {
-  a,
-  config,
-  useSpring,
-  useTrail,
-  useTransition
-} from '@react-spring/web';
+import { a, config, useSpring, useTransition } from '@react-spring/web';
 
 interface Props {
   setSwipeUp: React.Dispatch<React.SetStateAction<boolean>>;
@@ -17,12 +11,7 @@ interface Props {
   pageKey: string;
 }
 
-const Menu: React.FC<Props> = ({
-  setSwipeUp,
-  setPageKey,
-  swipeUp,
-  pageKey
-}) => {
+const Menu: React.FC<Props> = ({ setSwipeUp, setPageKey, pageKey }) => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const menu = [
     { name: 'Home', pageKey: 'home' },

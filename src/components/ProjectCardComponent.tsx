@@ -58,16 +58,3 @@ const ProjectCardComponent: React.FC<Props> = ({
 };
 
 export default ProjectCardComponent;
-
-// {
-//     "projectName": "3D Ping Pong Paddle Game",
-//     "thumbnail": "",
-//     "gif": "../../assets/gifs/ping-pong.gif",
-//     "info": {
-//       "description": "3D game made with physics using ThreeJS, React-Three-Fiber, and CannonJS/useCannon. How many time can you bounce the ball? Give it a try!"
-//     },
-//     "technologies": ["Three.js", "R3F", "Cannon.js"],
-//     "githubUrl": "https://github.com/kevinqtogitty/pong-game",
-//     "liveUrl": "https://rb.gy/oaoqw8",
-//     "isFullyFunctional": false
-//   },

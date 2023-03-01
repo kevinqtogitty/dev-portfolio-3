@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {
-  a,
-  config,
-  useSpring,
-  useSprings,
-  useTransition
-} from '@react-spring/web';
+import { a, config, useSpring } from '@react-spring/web';
 
 const HeroSection = () => {
   const [index, setIndex] = useState(0);
@@ -28,25 +22,6 @@ const HeroSection = () => {
   useEffect(() => {
     if (index === 4) setIndex(0);
   }, [index]);
-
-  useEffect(() => {
-    let mouseCursor = document.querySelector<HTMLElement>('.dotted');
-    let h1 = document.querySelectorAll<HTMLElement>('.hero-header');
-    const cursorChangeEnter = (e: any) => {
-      mouseCursor?.classList.add('hovered');
-    };
-    const cursorChangeLeave = (e: any) => {
-      mouseCursor?.classList.remove('hovered');
-    };
-    if (h1) {
-      h1.forEach((element: HTMLElement) =>
-        element.addEventListener('mouseenter', cursorChangeEnter)
-      );
-      h1.forEach((element: HTMLElement) =>
-        element.addEventListener('mouseleave', cursorChangeLeave)
-      );
-    }
-  }, []);
 
   const spring = useSpring({
     from: {
