@@ -1,0 +1,61 @@
+[
+  {
+    "projectName": "3D Galaxy Generator",
+    "thumbnail": "src/assets/images/galaxy.webp",
+    "info": {
+      "description": "A 3D experience built with Three.js & webGL. I'm interested in learning about game development and wanted to learn about the world of particle systems. Allows a user to customize a galaxy, makes for a nice desktop display!"
+    },
+    "technologies": ["Three.js", "webGL"],
+    "githubUrl": "https://github.com/kevinqtogitty/threejs-galaxy-generator",
+    "liveUrl": "https://galaxy-generator-tau-rust.vercel.app/",
+    "isFullyFunctional": true
+  },
+  {
+    "projectName": "Photography Portfolio/Store",
+    "thumbnail": "src/assets/images/photography.webp",
+    "gif": "../../assets/gifs/photo-website.gif",
+    "info": {
+      "description": "A responsive photography website and print store, designed with a mobile first approach. Uses Redux Toolkit to manage state, Stripe for payments and billing, and Cloudflare CDN for deployment"
+    },
+    "technologies": ["Redux Toolkit", "Stripe API"],
+    "githubUrl": "https://github.com/kevinqtogitty/rebuilt-personal-photo-website",
+    "liveUrl": "https://www.kevinqtophoto.com/",
+    "isFullyFunctional": true
+  },
+  {
+    "projectName": "Random Cocktail Generator",
+    "thumbnail": "src/assets/images/cocktail.webp",
+    "gif": "../../assets/gifs/random-cocktail.gif",
+    "info": {
+      "description": "Playfully designed, inspired by pastel 70's style using CocktailDB. Made for bartenders who need to brainstorm ideas for drink specials, and party people"
+    },
+    "technologies": ["Vite", "React", "Typescript"],
+    "githubUrl": "https://github.com/kevinqtogitty/random-cocktail-generator",
+    "liveUrl": "https://random-cocktail-generator-self.vercel.app/",
+    "isFullyFunctional": true
+  },
+  {
+    "projectName": "Aol Instant Messenger",
+    "thumbnail": "src/assets/images/messenger.webp",
+    "gif": "../../assets/gifs/aol-messenger.gif",
+    "info": {
+      "description": "A real-time chat application using websockets via socket.io. Made in the the style of AIM from the early 2000s. Allows a user to create a screennem and private room, other users can join that room given the code and chat with each other, recieving instantaneous updates. Yes, it even contains those familiar AIM notification sounds!"
+    },
+    "technologies": ["Express.js", "Socket.io"],
+    "githubUrl": "https://github.com/kevinqtogitty/aol-chat-app",
+    "liveUrl": "https://aol-messenger-client.vercel.app/",
+    "isFullyFunctional": false
+  },
+  {
+    "projectName": "HURON Hotel Landing Page",
+    "thumbnail": "src/assets/images/hotel.webp",
+    "gif": "../../assets/gifs/hotel-page.gif",
+    "info": {
+      "description": "Designed and built a fully responsive landing page for the HURON hotel, inspired by a clean and minimal Japanese aesthetic"
+    },
+    "technologies": ["React-Spring", "Radix-UI"],
+    "githubUrl": "https://github.com/kevinqtogitty/hotel-page",
+    "liveUrl": "https://hotel-page-psi.vercel.app/",
+    "isFullyFunctional": true
+  }
+]
