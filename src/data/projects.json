@@ -1,7 +1,7 @@
 [
   {
     "projectName": "3D Galaxy Generator",
-    "thumbnail": "../assets/images/galaxy.webp",
+    "thumbnail": "/images/galaxy.webp",
     "info": {
       "description": "A 3D experience built with Three.js & webGL. I'm interested in learning about game development and wanted to learn about the world of particle systems. Allows a user to customize a galaxy, makes for a nice desktop display!"
     },
@@ -12,7 +12,7 @@
   },
   {
     "projectName": "Photography Portfolio/Store",
-    "thumbnail": "../assets/images/photography.webp",
+    "thumbnail": "/images/photography.webp",
     "info": {
       "description": "A responsive photography website and print store, designed with a mobile first approach. Uses Redux Toolkit to manage state, Stripe for payments and billing, and Cloudflare CDN for deployment"
     },
@@ -23,7 +23,7 @@
   },
   {
     "projectName": "Random Cocktail Generator",
-    "thumbnail": "../assets/images/cocktail.webp",
+    "thumbnail": "/images/cocktail.webp",
     "info": {
       "description": "Playfully designed, inspired by pastel 70's style using CocktailDB. Made for bartenders who need to brainstorm ideas for drink specials, and party people"
     },
@@ -34,7 +34,7 @@
   },
   {
     "projectName": "Aol Instant Messenger",
-    "thumbnail": "../assets/images/messenger.webp",
+    "thumbnail": "/images/messenger.webp",
     "info": {
       "description": "A real-time chat application using websockets via socket.io. Made in the the style of AIM from the early 2000s. Allows a user to create a screennem and private room, other users can join that room given the code and chat with each other, recieving instantaneous updates. Yes, it even contains those familiar AIM notification sounds!"
     },
@@ -45,7 +45,7 @@
   },
   {
     "projectName": "HURON Hotel Landing Page",
-    "thumbnail": "../assets/images/hotel.webp",
+    "thumbnail": "/images/hotel.webp",
     "info": {
       "description": "Designed and built a fully responsive landing page for the HURON hotel, inspired by a clean and minimal Japanese aesthetic"
     },
