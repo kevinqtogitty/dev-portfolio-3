@@ -41,9 +41,17 @@ function App() {
       </svg>
     );
   };
+
+  const menuProps = {
+    setSwipeUp,
+    swipeUp,
+    setPageKey,
+    pageKey
+  };
+
   return (
     <div className="wrapper">
-      <Menu setSwipeUp={setSwipeUp} setPageKey={setPageKey} />
+      <Menu {...menuProps} />
       <P5Sketch />
       {pageKey === '01.Home' ? (
         <HeroSection />
@@ -51,11 +59,11 @@ function App() {
         <AboutSection />
       ) : pageKey === '03.Projects' ? (
         <ProjectsSection />
-      ) : pageKey === '04.contact' ? (
+      ) : pageKey === '04.Contact' ? (
         <ContactSection />
       ) : null}
 
-      <LoadingSwipe swipeUp={swipeUp} setSwipeUp={setSwipeUp} />
+      <LoadingSwipe swipeUp={swipeUp} pageKey={pageKey} />
     </div>
   );
 }
