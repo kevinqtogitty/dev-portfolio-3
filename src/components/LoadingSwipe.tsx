@@ -3,10 +3,10 @@ import React from 'react';
 
 interface Props {
   swipeUp: boolean;
-  setSwipeUp: React.Dispatch<React.SetStateAction<boolean>>;
+  pageKey: string;
 }
 
-const LoadingSwipe: React.FC<Props> = ({ swipeUp, setSwipeUp }) => {
+const LoadingSwipe: React.FC<Props> = ({ swipeUp, pageKey }) => {
   const spring = useSpring({
     height: swipeUp ? '100%' : '0%'
   });
@@ -18,11 +18,12 @@ const LoadingSwipe: React.FC<Props> = ({ swipeUp, setSwipeUp }) => {
         position: 'fixed',
         bottom: '0rem',
         width: '100%',
-        // border: '2px solid blue',
         backgroundColor: '#fcfbf5',
         zIndex: 3
       }}
-    />
+    >
+      <h1 style={{ padding: '1rem 1.3rem' }}>LOADING...</h1>
+    </a.div>
   );
 };
 
