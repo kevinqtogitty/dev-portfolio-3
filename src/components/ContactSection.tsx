@@ -1,6 +1,6 @@
 import { animated, useTrail } from '@react-spring/web';
 import React from 'react';
-import resume from '../assets/toKevinResume.pdf';
+import resume from '../assets/ToKevinResume.pdf';
 
 const ContactSection = () => {
   const links = [
