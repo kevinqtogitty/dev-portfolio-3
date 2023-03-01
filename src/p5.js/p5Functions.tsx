@@ -18,17 +18,21 @@ const sketch: Sketch = (p5) => {
         p5.createVector(p5.random(p5.width), p5.random(p5.height))
       );
     }
-    p5.stroke(250, 198, 8);
+    p5.stroke(133, 143, 177);
     p5.strokeWeight(1.5);
   };
 
-  p5.mouseReleased = () => {
+  p5.keyReleased = () => {
     p5.noiseSeed(p5.millis());
-    p5.stroke(p5.random(255), p5.random(255), p5.random(255));
+    const x = p5.stroke(p5.random(255), p5.random(255), p5.random(255));
   };
 
   const onScreen = (v: { x: number; y: number }) => {
     return v.x >= 0 && v.x <= p5.width && v.y >= 0 && v.y <= p5.height;
+  };
+
+  p5.windowResized = () => {
+    p5.resizeCanvas(window.innerWidth, window.innerHeight);
   };
 
   p5.draw = () => {
