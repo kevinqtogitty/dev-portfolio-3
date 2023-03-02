@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 interface Props {
   projectName: string;
@@ -21,6 +21,8 @@ const ProjectCardComponent: React.FC<Props> = ({
   thumbnail,
   isFullyFunctional
 }) => {
+  const [loading, setLoading] = useState(true);
+
   return (
     <div className="project-container">
       <div className="project-header">
@@ -50,7 +52,12 @@ const ProjectCardComponent: React.FC<Props> = ({
               </a>
             </div>
           </div>
-          <img className="project-img" src={`${thumbnail}`} alt={projectName} />
+          <img
+            className="project-img"
+            src={`${thumbnail}`}
+            alt={projectName}
+            onLoad={() => setLoading(false)}
+          />
         </div>
       </div>
     </div>
