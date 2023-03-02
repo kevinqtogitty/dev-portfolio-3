@@ -16,7 +16,7 @@
 }
 @font-face {
   font-family: Wotfard-Serif;
-  src: url("/public/Wotfard_Regular/Wotfard_Regular_Desktop/Wotfard-Regular.otf") format("opentype");
+  src: url("/Wotfard_Regular/Wotfard_Regular_Desktop/Wotfard-Regular.otf") format("opentype");
 }
 * {
   margin: 0;
@@ -108,7 +108,7 @@ body {
   flex-direction: column;
   row-gap: 3rem;
   position: absolute;
-  top: 10rem;
+  margin-top: 5rem;
 }
 @media (max-width: 768px) {
   .menu-list-mobile .links-container .links-box {
@@ -204,6 +204,13 @@ body {
   align-items: flex-start;
   height: 100vh;
   z-index: 1;
+  max-width: 1440px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .page-1 {
+    max-width: 0rem;
+  }
 }
 .page-1 .hero-header {
   max-width: calc(100vw - 30%);
@@ -309,6 +316,7 @@ body {
   height: 100vh;
   z-index: 1;
   background-color: #fcfbf5;
+  width: 100%;
 }
 .page-2 article {
   display: flex;
@@ -317,6 +325,12 @@ body {
   justify-content: center;
   align-items: center;
   max-width: 40rem;
+}
+@media (max-width: 480px) {
+  .page-2 article {
+    position: absolute;
+    top: 5rem;
+  }
 }
 .page-2 article div {
   display: flex;
