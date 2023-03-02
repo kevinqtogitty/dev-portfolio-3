@@ -51,44 +51,6 @@ const Menu: React.FC<Props> = ({ setSwipeUp, setPageKey, pageKey }) => {
     opacity: menuIsOpen ? 1 : 0,
     config: config.slow
   });
-  const MobileMenu = () => {
-    return (
-      <NavigationMenu.List className="menu-list-mobile">
-        <div className={`menu-trigger-mobile `}>
-          <img
-            src={PlusIcon}
-            alt="open menu plus icon"
-            className={`show-menu-icon ${menuIsOpen ? 'open' : ''} ${
-              pageKey === '02.About' || pageKey === '03.Projects'
-                ? 'light-background'
-                : null
-            }`}
-            onClick={() => setMenuIsOpen((state) => !state)}
-          />
-        </div>
-        <a.div className="links-container" style={spring}>
-          <a.div className="links-box" style={{ ...spring3, zIndex: 1 }}>
-            {menu.map((item, i) => (
-              <NavigationMenu.Item
-                className="menu-item"
-                onClick={(e) => handleSwipe(e, 'l')}
-              >
-                <span>0{i + 1}</span>.{item.name}
-              </NavigationMenu.Item>
-            ))}
-          </a.div>
-          <a.div
-            style={{
-              ...spring2,
-              position: 'absolute',
-              width: '100vw',
-              backgroundColor: '#fcfbf5'
-            }}
-          />
-        </a.div>
-      </NavigationMenu.List>
-    );
-  };
 
   return (
     <NavigationMenu.Root>
@@ -127,7 +89,7 @@ const Menu: React.FC<Props> = ({ setSwipeUp, setPageKey, pageKey }) => {
         )}
       </NavigationMenu.List>
       <NavigationMenu.List className="menu-list-mobile">
-        <div className={`menu-trigger-mobile `}>
+        <div className={`menu-trigger-mobile`}>
           <img
             src={PlusIcon}
             alt="open menu plus icon"
