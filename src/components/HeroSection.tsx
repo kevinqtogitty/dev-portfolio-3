@@ -59,7 +59,7 @@ const HeroSection = () => {
           <span /> <p>* Press any key for a surprise</p>
         </div>
         <div>
-          <span /> <p>Made with AstroJS, p5.js, React-Spring, Radix-UI</p>
+          <span /> <p>Made with Vite, p5.js, React-Spring, Radix-UI</p>
         </div>
       </div>
     </section>
