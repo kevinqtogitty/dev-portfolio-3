@@ -42,7 +42,6 @@ $breakpoint-laptop: 1025px;
   padding: 0;
   box-sizing: border-box;
   font-family: Neue-Montreal;
-  //   cursor: none;
 }
 
 svg {
@@ -92,17 +91,18 @@ body {
   background-color: #000;
 }
 
+.wrapper {
+}
+
 .menu-list .desktop {
   @media (max-width: $breakpoint-laptop) {
     display: none;
-    // border: 2px solid blue;
   }
 }
 
 .menu-list-mobile {
   @include flexRow();
   justify-content: flex-end;
-  // border: 2px solid red;
   position: absolute;
   right: 0rem;
   width: 100%;
@@ -128,7 +128,7 @@ body {
       @include flexColumn();
       row-gap: 3rem;
       position: absolute;
-      top: 10rem;
+      margin-top: 5rem;
       @media (max-width: $breakpoint-tablet) {
         top: 5rem;
       }
@@ -228,13 +228,13 @@ body {
   align-items: flex-start;
   height: 100vh;
   z-index: 1;
-  // border: 1px solid red;
+  max-width: 1440px;
+  width: 100%;
   @media (max-width: $breakpoint-tablet) {
-    // border: 2px solid blue;
+    max-width: 0rem;
   }
 
   @media (max-width: $breakpoint-mobile) {
-    // border: 2px solid blue;
   }
 
   .hero-header {
@@ -247,11 +247,10 @@ body {
   }
 
   h1 {
-    // display: flex;
     height: fit-content;
     padding: 0.5rem 1rem;
     font-size: 8rem;
-    // font-family: Graphik-Super;
+
     @media (max-width: $breakpoint-mobile) {
       font-size: 4rem;
     }
@@ -342,13 +341,18 @@ body {
   height: 100vh;
   z-index: 1;
   background-color: #fcfbf5;
-
+  width: 100%;
   article {
     @include flexColumn();
     row-gap: 3rem;
     justify-content: center;
     align-items: center;
     max-width: 40rem;
+
+    @media (max-width: $breakpoint-mobile) {
+      position: absolute;
+      top: 5rem;
+    }
 
     div {
       @include flexColumn();
@@ -385,13 +389,11 @@ body {
 
 .page-3 {
   @include flexColumn();
-  // border: 2px solid red;
   background-color: #fcfbf5;
   color: rgba(3, 2, 1, 0.8);
 
   height: fit-content;
   align-items: center;
-  // overflow: hidden;
 
   h2 {
     width: 95%;
@@ -411,7 +413,7 @@ body {
 
   article {
     @include flexRow();
-    // border: 1px solid blue;
+
     border-top: 0.5px solid #000;
     width: 95%;
     height: 100%;
@@ -434,7 +436,7 @@ body {
 
       h3 {
         font-size: 2.5rem;
-        // border: 2px solid red;
+
         text-align: right;
         height: 5rem;
         @media (max-width: $breakpoint-tablet) {
@@ -446,7 +448,7 @@ body {
       .text {
         position: relative;
         font-size: 2rem;
-        // height: fit-content;
+
         font-family: Neue-Montreal-Regular;
         @media (max-width: $breakpoint-tablet) {
           font-size: 1.5rem;
@@ -458,19 +460,18 @@ body {
 
         div {
           top: 0rem;
-          // border: 2px solid red;
         }
       }
     }
 
     .projects-section {
       @include flexColumn();
-      // border: 1px solid red;
+
       width: 150rem;
-      // padding: 0rem 1rem;
+
       padding-right: 5rem;
       border-right: 0.5px solid #000;
-      // overflow: scroll;
+
       @media (max-width: $breakpoint-tablet) {
         width: 110rem;
         padding-right: 2rem;
@@ -485,7 +486,7 @@ body {
 
       .project-container {
         @include flexColumn();
-        // border: 1px solid green;
+
         margin-top: 1rem;
         .project-header {
           @include flexRow();
@@ -514,7 +515,7 @@ body {
           .right {
             @include flexRow();
             justify-content: space-between;
-            // border: 2px solid red;
+
             height: fit-content;
             align-self: flex-end;
             padding: 0.2rem 0.25rem;
@@ -529,7 +530,7 @@ body {
               background-color: rgba(3, 2, 1, 0.8);
               color: #fcfbf5;
               padding: 0.5rem 0.6rem;
-              // border-radius: 50px;
+
               @media (max-width: $breakpoint-tablet) {
                 @include flexRow();
                 justify-content: center;
@@ -548,7 +549,6 @@ body {
           font-weight: 100;
 
           .project-img-container {
-            // border: 2px solid red;
             height: fit-content;
             position: relative;
           }
@@ -557,7 +557,7 @@ body {
             @include flexRow();
             position: absolute;
             color: #fff;
-            // border: 1px solid pink;
+
             height: 100%;
             width: 100%;
             justify-content: flex-end;
@@ -603,7 +603,6 @@ body {
           p {
             font-family: Neue-Montreal-Regular;
             padding: 0.4rem 0rem;
-            // border: 1px solid blue;
           }
         }
       }
@@ -614,14 +613,12 @@ body {
 .page-4 {
   @include flexColumn();
   height: 100vh;
-  // border: 2px solid red;
   background-color: rgba(3, 2, 1, 0.7);
   position: relative;
   justify-content: center;
   align-items: center;
 
   ul {
-    // position: absolute;
     @include flexColumn();
 
     width: 90%;
@@ -638,8 +635,6 @@ body {
         list-style: none;
         margin: -0.2rem;
         padding: 0rem;
-        // // position: relative;
-        // border: 2px solid red;
       }
 
       &::after {
@@ -664,12 +659,9 @@ body {
   display: flex;
   justify-content: flex-end;
   background-color: rgba(0, 0, 0, 1);
-  // backdrop-filter: blur(2px);
   width: 100%;
   position: fixed;
   z-index: 3;
-  // right: 1rem;
-  // top: 1rem;
   color: #fcfbf5;
   transition: color 1s ease-in;
   padding: 0.8rem 1rem;
@@ -692,13 +684,10 @@ body {
       height: 2rem;
     }
     &.open {
-      // filter: invert(0);
       transform: rotateZ(45deg);
     }
 
     &.light-background {
-      // filter: invert(0);
-      // transition: all 2s ease-in;
     }
   }
 }
