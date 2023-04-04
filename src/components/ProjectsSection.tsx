@@ -12,6 +12,7 @@ const ProjectsSection = () => {
     'React',
     'Node.js',
     'Express.js',
+    'Redis',
     'MongoDB',
     'PostgreSQL',
     'Firebase'
