@@ -420,6 +420,11 @@ body {
     justify-content: space-between;
   }
 }
+.page-3 article .skills .sketches {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 .page-3 article .skills h3 {
   font-size: 2.5rem;
   text-align: right;
