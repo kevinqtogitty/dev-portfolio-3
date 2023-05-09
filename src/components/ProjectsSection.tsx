@@ -33,12 +33,6 @@ const ProjectsSection = () => {
       <h2>Projects</h2>
       <article style={{ display: 'flex' }}>
         <div className="projects-section">
-          <h3>P5.js Sketches</h3>
-          <div style={{ display: 'flex' }}>
-            <P5UnknownPleasures />
-            <P5SnowFall />
-            <P5StartBurst />
-          </div>
           {projectData.map((project) => (
             <ProjectCardComponent {...project} />
           ))}
