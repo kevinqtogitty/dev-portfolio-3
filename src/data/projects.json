@@ -1,11 +1,22 @@
 [
   {
+    "projectName": "Criterion Channel Film Selector",
+    "thumbnail": "/images/galaxy.webp",
+    "info": {
+      "description": "A web scraper that retrieves nearly 3000 film titles currently streaming on the Criterion Channel, and randomizes a list of 10 titles to watch. Scraped with Puppeteer and data cached and updated daily with Redis"
+    },
+    "technologies": ["Node.js", "Puppeteer", "Redis", "Docker"],
+    "githubUrl": "https://github.com/kevinqtogitty/threejs-galaxy-generator",
+    "liveUrl": "https://github.com/kevinqtogitty/criterion-titles-puppeteer-backend",
+    "isFullyFunctional": true
+  },
+  {
     "projectName": "3D Galaxy Generator",
     "thumbnail": "/images/galaxy.webp",
     "info": {
       "description": "A 3D experience built with Three.js & webGL. I'm interested in learning about game development and wanted to learn about the world of particle systems. Allows a user to customize a galaxy, makes for a nice desktop display!"
     },
-    "technologies": ["Three.js", "webGL"],
+    "technologies": ["Three.js", "webGL", "JavaScript"],
     "githubUrl": "https://github.com/kevinqtogitty/threejs-galaxy-generator",
     "liveUrl": "https://galaxy-generator-tau-rust.vercel.app/",
     "isFullyFunctional": true
@@ -16,7 +27,7 @@
     "info": {
       "description": "A responsive photography website and print store, designed with a mobile first approach. Uses Redux Toolkit to manage state, Stripe for payments and billing, and Cloudflare CDN for deployment"
     },
-    "technologies": ["Redux Toolkit", "Stripe API"],
+    "technologies": ["Redux Toolkit", "Stripe API", "React"],
     "githubUrl": "https://github.com/kevinqtogitty/rebuilt-personal-photo-website",
     "liveUrl": "https://www.kevinqtophoto.com/",
     "isFullyFunctional": true
@@ -27,7 +38,7 @@
     "info": {
       "description": "Playfully designed, inspired by pastel 70's style using CocktailDB. Made for bartenders who need to brainstorm ideas for drink specials, and party people"
     },
-    "technologies": ["Vite", "React", "Typescript"],
+    "technologies": ["Vite", "React", "TypeScript"],
     "githubUrl": "https://github.com/kevinqtogitty/random-cocktail-generator",
     "liveUrl": "https://random-cocktail-generator-self.vercel.app/",
     "isFullyFunctional": true
