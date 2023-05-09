@@ -1,13 +1,13 @@
 [
   {
     "projectName": "Criterion Channel Film Selector",
-    "thumbnail": "/images/galaxy.webp",
+    "thumbnail": "/images/criterion.webp",
     "info": {
       "description": "A web scraper that retrieves nearly 3000 film titles currently streaming on the Criterion Channel, and randomizes a list of 10 titles to watch. Scraped with Puppeteer and data cached and updated daily with Redis"
     },
     "technologies": ["Node.js", "Puppeteer", "Redis", "Docker"],
-    "githubUrl": "https://github.com/kevinqtogitty/threejs-galaxy-generator",
-    "liveUrl": "https://github.com/kevinqtogitty/criterion-titles-puppeteer-backend",
+    "githubUrl": "https://github.com/kevinqtogitty/criterion-titles-puppeteer-backend",
+    "liveUrl": "https://randomize-criterion.vercel.app/",
     "isFullyFunctional": true
   },
   {
