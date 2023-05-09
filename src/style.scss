@@ -434,6 +434,10 @@ body {
         justify-content: space-between;
       }
 
+      .sketches {
+        @include flexColumn();
+        align-items: flex-end;
+      }
       h3 {
         font-size: 2.5rem;
 
