@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { P5Sketch } from './p5.js/p5Functions';
+import { P5Background } from './p5.js/p5Functions';
 import HeroSection from './components/HeroSection';
 import Menu from './components/Menu';
 import AboutSection from './components/AboutSection';
@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="wrapper">
       <Menu {...menuProps} />
-      <P5Sketch />
+      <P5Background />
       {pageKey === '01.Home' ? (
         <HeroSection />
       ) : pageKey === '02.About' ? (
