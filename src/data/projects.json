@@ -3,7 +3,7 @@
     "projectName": "Criterion Channel Film Selector",
     "thumbnail": "/images/criterion.webp",
     "info": {
-      "description": "A web scraper that retrieves nearly 3000 film titles currently streaming on the Criterion Channel, and randomizes a list of 10 titles to watch. Scraped with Puppeteer and data cached and updated daily with Redis"
+      "description": "A web scraper that retrieves nearly 3000 film titles currently streaming on the Criterion Channel and randomizes a list of 10 titles to watch. Scraped with Puppeteer and uses Redis as its in memory cache"
     },
     "technologies": ["Node.js", "Puppeteer", "Redis", "Docker"],
     "githubUrl": "https://github.com/kevinqtogitty/criterion-titles-puppeteer-backend",
