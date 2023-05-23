@@ -14,7 +14,6 @@ interface Props {
 const Menu: React.FC<Props> = ({ setSwipeUp, setPageKey, pageKey }) => {
   const [menuIsOpen, setMenuIsOpen] = useState(true);
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
-  console.log(mobileMenuIsOpen);
   const menu = [
     { name: 'Home', pageKey: 'home' },
     { name: 'About', pageKey: 'about' },
@@ -29,7 +28,7 @@ const Menu: React.FC<Props> = ({ setSwipeUp, setPageKey, pageKey }) => {
   });
 
   const handleSwipe = (e: any, menuType?: string) => {
-    if (menuType) setMenuIsOpen((state) => !state);
+    if (menuType) setMobileMenuIsOpen((state) => !state);
     console.log(e.target.innerText);
     setSwipeUp((state) => !state);
     setTimeout(() => {
