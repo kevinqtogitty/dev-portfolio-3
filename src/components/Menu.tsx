@@ -13,6 +13,7 @@ interface Props {
 
 const Menu: React.FC<Props> = ({ setSwipeUp, setPageKey, pageKey }) => {
   const [menuIsOpen, setMenuIsOpen] = useState(true);
+  const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
   const menu = [
     { name: 'Home', pageKey: 'home' },
     { name: 'About', pageKey: 'about' },
@@ -93,12 +94,12 @@ const Menu: React.FC<Props> = ({ setSwipeUp, setPageKey, pageKey }) => {
           <img
             src={PlusIcon}
             alt="open menu plus icon"
-            className={`show-menu-icon ${menuIsOpen ? 'open' : ''} ${
+            className={`show-menu-icon ${mobileMenuIsOpen ? 'open' : ''} ${
               pageKey === '02.About' || pageKey === '03.Projects'
                 ? 'light-background'
                 : null
             }`}
-            onClick={() => setMenuIsOpen((state) => !state)}
+            onClick={() => setMobileMenuIsOpen((state) => !state)}
           />
         </div>
         <a.div className="links-container" style={spring}>
