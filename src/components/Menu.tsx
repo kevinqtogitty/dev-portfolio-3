@@ -14,6 +14,7 @@ interface Props {
 const Menu: React.FC<Props> = ({ setSwipeUp, setPageKey, pageKey }) => {
   const [menuIsOpen, setMenuIsOpen] = useState(true);
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
+  console.log(mobileMenuIsOpen);
   const menu = [
     { name: 'Home', pageKey: 'home' },
     { name: 'About', pageKey: 'about' },
@@ -38,18 +39,18 @@ const Menu: React.FC<Props> = ({ setSwipeUp, setPageKey, pageKey }) => {
   };
 
   const spring = useSpring({
-    height: menuIsOpen ? '100vh' : '0vh',
+    height: mobileMenuIsOpen ? '100vh' : '0vh',
     delay: 150
   });
 
   const spring2 = useSpring({
-    height: menuIsOpen ? '100%' : '0%',
+    height: mobileMenuIsOpen ? '100%' : '0%',
     delay: 300
   });
 
   const spring3 = useSpring({
-    y: menuIsOpen ? '0%' : '-150%',
-    opacity: menuIsOpen ? 1 : 0,
+    y: mobileMenuIsOpen ? '0%' : '-150%',
+    opacity: mobileMenuIsOpen ? 1 : 0,
     config: config.slow
   });
 
