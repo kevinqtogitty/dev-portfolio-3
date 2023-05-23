@@ -12,7 +12,7 @@ interface Props {
 }
 
 const Menu: React.FC<Props> = ({ setSwipeUp, setPageKey, pageKey }) => {
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const [menuIsOpen, setMenuIsOpen] = useState(true);
   const menu = [
     { name: 'Home', pageKey: 'home' },
     { name: 'About', pageKey: 'about' },
