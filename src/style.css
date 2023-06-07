@@ -593,6 +593,9 @@ body {
   border-radius: 5px;
   height: 100%;
 }
+.page-3 article .projects-section .project-container .project-description .code-sandbox {
+  height: 50rem;
+}
 .page-3 article .projects-section .project-container .project-description p {
   font-family: Neue-Montreal-Regular;
   padding: 0.4rem 0rem;
