@@ -27,13 +27,13 @@ const ProjectCardComponent: React.FC<Props> = ({
     <div className="project-container">
       <div className="project-header">
         <div className="left">{projectName}</div>
-        <div className="right">
+        <ul className="right">
           {technologies.map((item, i) => (
-            <div key={i} className="tech">
+            <li key={i} className="tech">
               {item}
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
       <div className="project-description">
         <p>{info.description}</p>
