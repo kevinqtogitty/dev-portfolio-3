@@ -1,22 +1,23 @@
 @font-face {
   font-family: Neue-Montreal;
-  src: url("/neue-montreal/NeueMontreal-Medium.otf") format("opentype");
+  src: url('/neue-montreal/NeueMontreal-Medium.otf') format('opentype');
 }
 @font-face {
   font-family: Neue-Montreal-Regular;
-  src: url("/neue-montreal/NeueMontreal-Regular.otf") format("opentype");
+  src: url('/neue-montreal/NeueMontreal-Regular.otf') format('opentype');
 }
 @font-face {
   font-family: Neue-Montreal-Light-Italic;
-  src: url("/neue-montreal/NeueMontreal-LightItalic.otf") format("opentype");
+  src: url('/neue-montreal/NeueMontreal-LightItalic.otf') format('opentype');
 }
 @font-face {
   font-family: Neue-Montreal-Light;
-  src: url("/neue-montreal/NeueMontreal-Light.otf") format("opentype");
+  src: url('/neue-montreal/NeueMontreal-Light.otf') format('opentype');
 }
 @font-face {
   font-family: Wotfard-Serif;
-  src: url("/Wotfard_Regular/Wotfard_Regular_Desktop/Wotfard-Regular.otf") format("opentype");
+  src: url('/Wotfard_Regular/Wotfard_Regular_Desktop/Wotfard-Regular.otf')
+    format('opentype');
 }
 * {
   margin: 0;
@@ -139,7 +140,7 @@ body {
   display: flex;
   flex-direction: column;
   -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
+  column-gap: 0.5rem;
   align-items: flex-end;
   justify-content: center;
   right: 1rem;
@@ -245,7 +246,21 @@ body {
   transition-delay: 1s;
 }
 .page-1 h1 p.gradient-1 {
-  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
 }
 .page-1 h1 p.gradient-2 {
   background-image: linear-gradient(45deg, #647bc2, #ca467b, #e9c37c);
@@ -271,7 +286,7 @@ body {
   flex-direction: column;
   position: fixed;
   -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
+  column-gap: 0.5rem;
   bottom: 1rem;
   left: 1rem;
   align-items: flex-start;
@@ -286,7 +301,7 @@ body {
   display: flex;
   flex-direction: row;
   -moz-column-gap: 0.7rem;
-       column-gap: 0.7rem;
+  column-gap: 0.7rem;
 }
 .page-1 .footer div span {
   border-bottom: 0.05px solid #fcfbf5;
@@ -515,14 +530,20 @@ body {
   align-self: flex-end;
   padding: 0.2rem 0.25rem;
   -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  column-gap: 1rem;
 }
 @media (max-width: 480px) {
   .page-3 article .projects-section .project-container .project-header .right {
     align-self: flex-start;
   }
 }
-.page-3 article .projects-section .project-container .project-header .right .tech {
+.page-3
+  article
+  .projects-section
+  .project-container
+  .project-header
+  .right
+  .tech {
   font-size: 0.8rem;
   font-family: Neue-Montreal-Regular;
   border: none;
@@ -531,7 +552,13 @@ body {
   padding: 0.5rem 0.6rem;
 }
 @media (max-width: 768px) {
-  .page-3 article .projects-section .project-container .project-header .right .tech {
+  .page-3
+    article
+    .projects-section
+    .project-container
+    .project-header
+    .right
+    .tech {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -547,12 +574,22 @@ body {
   row-gap: 1rem;
   font-weight: 100;
 }
-.page-3 article .projects-section .project-container .project-description .project-img-container {
+.page-3
+  article
+  .projects-section
+  .project-container
+  .project-description
+  .project-img-container {
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
 }
-.page-3 article .projects-section .project-container .project-description .project-overlay {
+.page-3
+  article
+  .projects-section
+  .project-container
+  .project-description
+  .project-overlay {
   display: flex;
   flex-direction: row;
   position: absolute;
@@ -564,36 +601,77 @@ body {
   background-color: rgba(3, 2, 1, 0);
   transition: background-color 300ms ease-in;
   -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  column-gap: 1rem;
   padding: 0.8rem 1rem;
 }
-.page-3 article .projects-section .project-container .project-description .project-overlay:hover {
+.page-3
+  article
+  .projects-section
+  .project-container
+  .project-description
+  .project-overlay:hover {
   background-color: rgba(3, 2, 1, 0.3);
 }
-.page-3 article .projects-section .project-container .project-description .project-overlay .project-links {
+.page-3
+  article
+  .projects-section
+  .project-container
+  .project-description
+  .project-overlay
+  .project-links {
   background-color: #000;
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
   transition: all 300ms ease-in;
 }
-.page-3 article .projects-section .project-container .project-description .project-overlay .project-links a {
+.page-3
+  article
+  .projects-section
+  .project-container
+  .project-description
+  .project-overlay
+  .project-links
+  a {
   color: #fff;
   text-decoration: none;
   transition: all 300ms ease-in;
   font-family: Neue-Montreal-Regular;
 }
-.page-3 article .projects-section .project-container .project-description .project-overlay .project-links:hover a {
+.page-3
+  article
+  .projects-section
+  .project-container
+  .project-description
+  .project-overlay
+  .project-links:hover
+  a {
   color: #000;
 }
-.page-3 article .projects-section .project-container .project-description .project-overlay .project-links:hover {
+.page-3
+  article
+  .projects-section
+  .project-container
+  .project-description
+  .project-overlay
+  .project-links:hover {
   background-color: #fff;
 }
-.page-3 article .projects-section .project-container .project-description .project-img {
+.page-3
+  article
+  .projects-section
+  .project-container
+  .project-description
+  .project-img {
   width: 100%;
   border-radius: 5px;
   height: 100%;
 }
-.page-3 article .projects-section .project-container .project-description .code-sandbox {
+.page-3
+  article
+  .projects-section
+  .project-container
+  .project-description
+  .code-sandbox {
   height: 50rem;
 }
 .page-3 article .projects-section .project-container .project-description p {
@@ -634,7 +712,7 @@ body {
   padding: 0rem;
 }
 .page-4 ul a::after {
-  content: "";
+  content: '';
   border-bottom: 3px solid #fcfbf5;
   width: 0%;
   display: block;
@@ -700,4 +778,4 @@ body {
   100% {
     background-position: left;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

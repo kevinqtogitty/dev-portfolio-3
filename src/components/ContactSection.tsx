@@ -4,11 +4,11 @@ import resume from '../assets/KevinToResume.pdf';
 
 const ContactSection = () => {
   const links = [
-    { text: 'Email', link: 'mailto:kevinq.to@gmail.com' },
     { text: 'Resume/CV', link: resume },
     { text: 'Github', link: 'https://www.github.com/kevinqtogitty' },
     { text: 'LinkedIn', link: 'https://www.linkedin.com/in/kevinqto/' },
-    { text: 'Dev.to', link: 'https://www.dev.to/kevinqtogitty' }
+    { text: 'Dev.to', link: 'https://www.dev.to/kevinqtogitty' },
+    { text: 'Email', link: 'mailto:kevinq.to@gmail.com' }
   ];
 
   const trail = useTrail(links.length, {
