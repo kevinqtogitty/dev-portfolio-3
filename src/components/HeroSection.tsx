@@ -5,10 +5,9 @@ const HeroSection = () => {
   const [index, setIndex] = useState(0);
 
   const items = [
-    { text: 'Web developer', gradient: 'gradient-1' },
+    { text: 'Software Engineer', gradient: 'gradient-1' },
     { text: 'Photographer', gradient: 'gradient-2' },
-    { text: 'Cinephile', gradient: 'gradient-3' },
-    { text: 'Aphex Twin fan', gradient: 'gradient-4' }
+    { text: 'Cinephile', gradient: 'gradient-3' }
   ];
 
   useEffect(() => {

@@ -29,7 +29,6 @@ const Menu: React.FC<Props> = ({ setSwipeUp, setPageKey, pageKey }) => {
 
   const handleSwipe = (e: any, menuType?: string) => {
     if (menuType) setMobileMenuIsOpen((state) => !state);
-    console.log(e.target.innerText);
     setSwipeUp((state) => !state);
     setTimeout(() => {
       setSwipeUp((state) => !state);
