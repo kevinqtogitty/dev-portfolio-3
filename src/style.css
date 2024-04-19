@@ -330,7 +330,8 @@ body {
   align-items: center;
   height: 100vh;
   z-index: 1;
-  background-color: #fcfbf5;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(0.1rem);
   width: 100%;
 }
 .page-2 article {
@@ -355,10 +356,10 @@ body {
   background-color: rgba(3, 2, 1, 0.8);
   padding: 1.2rem 1rem;
   border-radius: 6px;
-  background-color: #fcfbf5;
+  background-color: rgba(0, 0, 0, 0);
 }
 .page-2 article div p {
-  color: #555555;
+  color: #fcfbf5;
   font-family: Wotfard-Serif;
 }
 .page-2 article div p .hyperlink {

@@ -4,8 +4,7 @@ import picture from '/images/profileMe.jpg';
 
 const AboutSection = () => {
   const style = {
-    position: 'relative',
-    left: '1rem'
+    alignSelf: 'baseline'
   };
 
   return (

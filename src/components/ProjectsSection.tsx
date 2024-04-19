@@ -2,24 +2,18 @@ import React from 'react';
 import { a, useTrail } from '@react-spring/web';
 import projectData from '../data/projects.json';
 import ProjectCardComponent from './ProjectCardComponent';
-import {
-  P5SnowFall,
-  P5StartBurst,
-  P5UnknownPleasures
-} from '../p5.js/p5Functions';
 
 const ProjectsSection = () => {
   const data = [
     'HTML5',
-    'CSS3',
+    'CSS',
     'Javascript',
     'Typescript',
+    'AWS Serverless',
     'React',
     'Node.js',
-    'Express.js',
     'Redis',
     'MongoDB',
-    'PostgreSQL',
     'Firebase'
   ];
 

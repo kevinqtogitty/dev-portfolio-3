@@ -8,7 +8,7 @@
     "technologies": ["Node.js", "Puppeteer", "Redis", "Docker"],
     "githubUrl": "https://github.com/kevinqtogitty/criterion-titles-puppeteer-backend",
     "liveUrl": "https://randomize-criterion.vercel.app/",
-    "isFullyFunctional": true
+    "isFullyFunctional": false
   },
   {
     "projectName": "3D Galaxy Generator",
