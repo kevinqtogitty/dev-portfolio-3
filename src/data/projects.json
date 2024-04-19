@@ -41,7 +41,7 @@
     "technologies": ["Vite", "React", "TypeScript"],
     "githubUrl": "https://github.com/kevinqtogitty/random-cocktail-generator",
     "liveUrl": "https://random-cocktail-generator-self.vercel.app/",
-    "isFullyFunctional": true
+    "isFullyFunctional": false
   },
   {
     "projectName": "Aol Instant Messenger",
