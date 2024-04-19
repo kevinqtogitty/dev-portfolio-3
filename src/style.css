@@ -361,6 +361,7 @@ body {
 .page-2 article div p {
   color: #fcfbf5;
   font-family: Wotfard-Serif;
+  align-self: baseline;
 }
 .page-2 article div p .hyperlink {
   cursor: point;

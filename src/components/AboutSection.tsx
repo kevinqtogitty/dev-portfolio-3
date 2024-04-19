@@ -3,16 +3,12 @@ import React from 'react';
 import picture from '/images/profileMe.jpg';
 
 const AboutSection = () => {
-  const style = {
-    alignSelf: 'baseline'
-  };
-
   return (
     <section className="page-section page-2">
       <article>
         <img src={picture} alt="Profile picture of me, Kevin To" />
         <div>
-          <p {...style}>
+          <p>
             Hey there! I'm a full stack software engineer based in the
             Philadelphia Area 🔔.
           </p>
