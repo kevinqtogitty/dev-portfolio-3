@@ -59,9 +59,7 @@ const Menu: React.FC<Props> = ({ setSwipeUp, setPageKey, pageKey }) => {
       >
         <NavigationMenu.Item
           className={`menu-trigger ${menuIsOpen ? 'open' : ''} ${
-            pageKey === '02.About' || pageKey === '03.Projects'
-              ? 'invert-color'
-              : null
+            pageKey === '03.Projects' ? 'invert-color' : null
           }`}
           onClick={() => setMenuIsOpen((state) => !state)}
         >
@@ -74,9 +72,7 @@ const Menu: React.FC<Props> = ({ setSwipeUp, setPageKey, pageKey }) => {
               <a.div style={{ ...style }}>
                 <NavigationMenu.Item
                   className={`link ${
-                    pageKey === '02.About' || pageKey === '03.Projects'
-                      ? 'invert-color'
-                      : null
+                    pageKey === '03.Projects' ? 'invert-color' : null
                   }`}
                   value={menuItem.pageKey}
                   onClick={(e) => handleSwipe(e)}
