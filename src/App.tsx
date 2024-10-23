@@ -11,17 +11,6 @@ function App() {
   const [swipeUp, setSwipeUp] = useState(false);
   const [pageKey, setPageKey] = useState('01.Home');
 
-  useEffect(() => {
-    let mouseCursor = document.querySelector<HTMLElement>('.cursor');
-    const cursor = (e: any) => {
-      if (mouseCursor) {
-        mouseCursor.style.top = e.pageY + 'px';
-        mouseCursor.style.left = e.pageX + 'px';
-      }
-    };
-    window.addEventListener('mousemove', cursor);
-  }, []);
-
   const menuProps = {
     setSwipeUp,
     swipeUp,
