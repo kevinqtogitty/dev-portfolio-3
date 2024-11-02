@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
+import { Link, useNavigate } from 'react-router-dom';
 import PlusIcon from '../assets/icons/plus.svg';
 
 import { a, config, useSpring, useTransition } from '@react-spring/web';
@@ -7,50 +8,59 @@ import { a, config, useSpring, useTransition } from '@react-spring/web';
 interface Props {
   setSwipeUp: React.Dispatch<React.SetStateAction<boolean>>;
   setPageKey: React.Dispatch<React.SetStateAction<string>>;
+  setMobileMenuIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setMenuIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   swipeUp: boolean;
   pageKey: string;
+  mobileMenuIsOpen: boolean;
+  menuIsOpen: boolean;
 }
 
-const Menu: React.FC<Props> = ({ setSwipeUp, setPageKey, pageKey }) => {
-  const [menuIsOpen, setMenuIsOpen] = useState(true);
-  const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
-  const menu = [
-    { name: 'Home', pageKey: 'home' },
-    { name: 'About', pageKey: 'about' },
-    { name: 'Projects', pageKey: 'projects' },
-    { name: 'Contact', pageKey: 'contact' }
-  ];
-
+const Menu: React.FC<Props> = ({
+  setSwipeUp,
+  mobileMenuIsOpen,
+  setMobileMenuIsOpen,
+  menuIsOpen,
+  setMenuIsOpen
+}) => {
+  const navigate = useNavigate();
+  const [pendingPath, setPendingPath] = useState('/');
   const transition = useTransition(menuIsOpen, {
-    from: { y: '50%', opacity: 0 },
-    enter: { y: '0%', opacity: 1 },
-    leave: { y: '50%', opacity: 0 }
+    from: { opacity: 0, transform: 'translateY(-20px)' },
+    enter: { opacity: 1, transform: 'translateY(0)' },
+    leave: { opacity: 0, transform: 'translateY(-20px)' },
+    config: { duration: 200 }
   });
-
-  const handleSwipe = (e: any, menuType?: string) => {
-    if (menuType) setMobileMenuIsOpen((state) => !state);
-    setSwipeUp((state) => !state);
-    setTimeout(() => {
-      setSwipeUp((state) => !state);
-      setPageKey(e.target.innerText);
-    }, 1000);
-  };
 
   const spring = useSpring({
     height: mobileMenuIsOpen ? '100vh' : '0vh',
     delay: 150
   });
-
   const spring2 = useSpring({
     height: mobileMenuIsOpen ? '100%' : '0%',
     delay: 300
   });
-
   const spring3 = useSpring({
     y: mobileMenuIsOpen ? '0%' : '-150%',
     opacity: mobileMenuIsOpen ? 1 : 0,
     config: config.slow
   });
+
+  const menu = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Contact', path: '/contact' }
+  ];
+
+  const handleSwipe = (path: string) => {
+    setSwipeUp(true);
+    setPendingPath(path);
+    setTimeout(() => {
+      navigate(path);
+      setTimeout(() => setSwipeUp(false), 500);
+    }, 750);
+  };
 
   return (
     <NavigationMenu.Root>
@@ -59,26 +69,31 @@ const Menu: React.FC<Props> = ({ setSwipeUp, setPageKey, pageKey }) => {
       >
         <NavigationMenu.Item
           className={`menu-trigger ${menuIsOpen ? 'open' : ''} ${
-            pageKey === '03.Projects' ? 'invert-color' : null
+            pendingPath === '/projects' ? 'invert-color' : ''
           }`}
-          onClick={() => setMenuIsOpen((state) => !state)}
+          onClick={() => setMenuIsOpen((state: boolean) => !state)}
         >
           Menu
         </NavigationMenu.Item>
         {transition(
           (style, item) =>
             item &&
-            menu.map((menuItem, i) => (
-              <a.div style={{ ...style }}>
+            menu.map(({ path, name }, i) => (
+              <a.div style={{ ...style }} key={i}>
                 <NavigationMenu.Item
                   className={`link ${
-                    pageKey === '03.Projects' ? 'invert-color' : null
+                    pendingPath === '/projects' ? 'invert-color' : ''
                   }`}
-                  value={menuItem.pageKey}
-                  onClick={(e) => handleSwipe(e)}
-                  key={i}
+                  onClick={() => handleSwipe(path)}
                 >
-                  <span>0{i + 1}</span>.{menuItem.name}
+                  <Link
+                    to="#"
+                    className={`menu-link ${
+                      pendingPath === '/projects' ? 'invert-color' : ''
+                    }`}
+                  >
+                    <span>0{i + 1}</span>.{name}
+                  </Link>
                 </NavigationMenu.Item>
               </a.div>
             ))
@@ -89,23 +104,21 @@ const Menu: React.FC<Props> = ({ setSwipeUp, setPageKey, pageKey }) => {
           <img
             src={PlusIcon}
             alt="open menu plus icon"
-            className={`show-menu-icon ${mobileMenuIsOpen ? 'open' : ''} ${
-              pageKey === '02.About' || pageKey === '03.Projects'
-                ? 'light-background'
-                : null
-            }`}
+            className={`show-menu-icon ${mobileMenuIsOpen ? 'open' : ''}`}
             onClick={() => setMobileMenuIsOpen((state) => !state)}
           />
         </div>
         <a.div className="links-container" style={spring}>
           <a.div className="links-box" style={{ ...spring3, zIndex: 1 }}>
-            {menu.map((item, i) => (
+            {menu.map(({ path, name }, i) => (
               <NavigationMenu.Item
                 key={i}
                 className="menu-item"
-                onClick={(e) => handleSwipe(e, 'l')}
+                onClick={() => handleSwipe(path)}
               >
-                <span>0{i + 1}</span>.{item.name}
+                <Link to="#" className="menu-link">
+                  <span>0{i + 1}</span>.{name}
+                </Link>
               </NavigationMenu.Item>
             ))}
           </a.div>
@@ -118,7 +131,7 @@ const Menu: React.FC<Props> = ({ setSwipeUp, setPageKey, pageKey }) => {
             }}
           />
         </a.div>
-      </NavigationMenu.List>{' '}
+      </NavigationMenu.List>
     </NavigationMenu.Root>
   );
 };
